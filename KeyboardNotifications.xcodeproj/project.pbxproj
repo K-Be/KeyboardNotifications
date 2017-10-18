@@ -14,6 +14,7 @@
 		4968A7981F95EF3800F6F024 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4968A7961F95EF3800F6F024 /* LaunchScreen.storyboard */; };
 		4968A79B1F95EF3800F6F024 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4968A79A1F95EF3800F6F024 /* main.m */; };
 		4968A7A51F95EF3800F6F024 /* KeyboardNotificationsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4968A7A41F95EF3800F6F024 /* KeyboardNotificationsTests.m */; };
+		4968A7B71F97154B00F6F024 /* CustomInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4968A7B61F97154B00F6F024 /* CustomInputView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		4968A7A01F95EF3800F6F024 /* KeyboardNotificationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeyboardNotificationsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4968A7A41F95EF3800F6F024 /* KeyboardNotificationsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyboardNotificationsTests.m; sourceTree = "<group>"; };
 		4968A7A61F95EF3800F6F024 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4968A7B51F97154B00F6F024 /* CustomInputView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomInputView.h; sourceTree = "<group>"; };
+		4968A7B61F97154B00F6F024 /* CustomInputView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomInputView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				4968A78C1F95EF3700F6F024 /* AppDelegate.m */,
 				4968A78E1F95EF3700F6F024 /* ViewController.h */,
 				4968A78F1F95EF3700F6F024 /* ViewController.m */,
+				4968A7B51F97154B00F6F024 /* CustomInputView.h */,
+				4968A7B61F97154B00F6F024 /* CustomInputView.m */,
 				4968A7911F95EF3800F6F024 /* Main.storyboard */,
 				4968A7941F95EF3800F6F024 /* Assets.xcassets */,
 				4968A7961F95EF3800F6F024 /* LaunchScreen.storyboard */,
@@ -207,6 +212,7 @@
 			files = (
 				4968A7901F95EF3700F6F024 /* ViewController.m in Sources */,
 				4968A79B1F95EF3800F6F024 /* main.m in Sources */,
+				4968A7B71F97154B00F6F024 /* CustomInputView.m in Sources */,
 				4968A78D1F95EF3700F6F024 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

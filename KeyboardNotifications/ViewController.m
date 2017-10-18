@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "CustomInputView.h"
+
 
 @interface ViewController ()
 
@@ -35,6 +37,10 @@
 - (void)_UIKeyboardWillChangeFrameNotification:(NSNotification*)notification;
 - (void)_UIKeyboardDidChangeFrameNotification:(NSNotification*)notification;
 
+- (void)_UITextFieldTextDidBeginEditingNotification:(NSNotification*)notification;
+- (void)_UITextFieldTextDidEndEditingNotification:(NSNotification*)notification;
+- (void)_UITextFieldTextDidChangeNotification:(NSNotification*)notification;
+
 - (void)_unsubscribeFromNotificationsInList:(NSArray<NSNotificationName>*)notifications;
 
 @end
@@ -46,6 +52,8 @@
 	[super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 	[self _subscribeToNotifications];
+	
+	self.textField.inputView = [[CustomInputView alloc] initWithFrame:CGRectMake(0.0, 0.0, self.view.bounds.size.width, 157.0)];
 }
 
 
@@ -105,6 +113,18 @@
 																					 selector:@selector(_UIKeyboardDidChangeFrameNotification:)
 																							 name:UIKeyboardDidChangeFrameNotification
 																						 object:nil];
+	[[NSNotificationCenter defaultCenter] addObserver:self
+																					 selector:@selector(_UITextFieldTextDidBeginEditingNotification:)
+																							 name:UITextFieldTextDidBeginEditingNotification
+																						 object:nil];
+	[[NSNotificationCenter defaultCenter] addObserver:self
+																					 selector:@selector(_UITextFieldTextDidEndEditingNotification:)
+																							 name:UITextFieldTextDidEndEditingNotification
+																						 object:nil];
+	[[NSNotificationCenter defaultCenter] addObserver:self
+																					 selector:@selector(_UITextFieldTextDidChangeNotification:)
+																							 name:UITextFieldTextDidChangeNotification
+																						 object:nil];
 }
 
 
@@ -115,7 +135,10 @@
 																								 UIKeyboardWillHideNotification,
 																								 UIKeyboardDidHideNotification,
 																								 UIKeyboardWillChangeFrameNotification,
-																								 UIKeyboardDidChangeFrameNotification];
+																								 UIKeyboardDidChangeFrameNotification,
+																								 UITextFieldTextDidBeginEditingNotification,
+																								 UITextFieldTextDidEndEditingNotification,
+																								 UITextFieldTextDidChangeNotification];
 	[self _unsubscribeFromNotificationsInList:notifications];
 }
 
@@ -153,6 +176,22 @@
 - (void)_UIKeyboardDidChangeFrameNotification:(NSNotification*)notification
 {
 	[self _printNotificationInformation:notification];
+}
+
+
+- (void)_UITextFieldTextDidBeginEditingNotification:(NSNotification*)notification
+{
+}
+
+
+- (void)_UITextFieldTextDidEndEditingNotification:(NSNotification*)notification
+{
+}
+
+
+- (void)_UITextFieldTextDidChangeNotification:(NSNotification*)notification
+{
+	
 }
 
 
